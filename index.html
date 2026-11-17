@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05051a">
+  <meta name="description" content="Portafolio de Javier Aguirre, estudiante de la Tecnicatura en Programación y desarrollador web en formación. Proyectos, habilidades y contacto.">
+  <title>Javier Aguirre | Estudiante de Programación y desarrollo web</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="Monocraft.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Fondo animado decorativo: sin audio, silenciado y en bucle -->
+  <div class="bg-video" id="bg-video" style="background-image:url('assets/fondo-poster.jpg')" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="auto" poster="assets/fondo-poster.jpg" tabindex="-1">
+      <source src="assets/fondo-saintseiya.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="bg-veil" aria-hidden="true"></div>
+
+  <audio id="bg-music" src="pegasusfantasyslow.mp3" loop preload="auto"></audio>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#inicio" aria-label="Javier Aguirre, inicio">
+        <svg class="wordmark-star" viewBox="0 0 7 7" shape-rendering="crispEdges" aria-hidden="true"><path d="M3 0h1v2h1v1h2v1h-2v1h-1v2h-1v-2h-1v-1h-2v-1h2v-1h1z"/></svg>
+        <span>Javier Aguirre<span class="wordmark-dot">_</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#formacion">Formación</a>
+        <a href="inspiracion.html">Inspiración</a>
+        <a href="#contacto" class="nav-contact">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section class="hero section-shell" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow reveal"><span class="status-dot"></span> Buenos Aires, Argentina · Disponible para crear</p>
+        <h1 id="hero-title" class="reveal" style="--d:80ms">Javier<span class="hero-last">Aguirre</span></h1>
+        <p class="hero-role reveal" style="--d:160ms">Estudiante de Tecnicatura en Programación<span class="cursor" aria-hidden="true"></span></p>
+        <p class="hero-intro reveal" style="--d:240ms">Autónomo, responsable y proactivo. Me gusta resolver desafíos técnicos con soluciones prácticas y organizadas: sitios web dinámicos, lógica de programación y videojuegos.</p>
+        <div class="hero-actions reveal" style="--d:320ms">
+          <a class="button button-primary" href="#proyectos"><span>Ver proyectos</span><span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#contacto">Hablemos <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-meta reveal" style="--d:400ms" aria-label="Tecnologías principales">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>Python</span><span>MySQL</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" style="--d:200ms">
+        <div class="hero-card px">
+          <div class="card-top card-label"><span>Ludica45</span><b>Nivel: en formación</b></div>
+          <div class="card-scene has-gif">
+            <img class="avatar-gif" src="seiya.gif" alt="Avatar animado: Seiya de Pegaso, personaje de Saint Seiya" width="450" height="540">
+          </div>
+          <ul class="card-data">
+            <li><span>Clase</span><span>Desarrollador web</span></li>
+            <li><span>Escuela</span><span>EEST N.º 5</span></li>
+            <li><span>Idiomas</span><span>ES nativo · EN avanzado</span></li>
+            <li><span>Estado</span><span>Siempre aprendiendo</span></li>
+          </ul>
+        </div>
+        <div class="floating-note" aria-hidden="true">Cargando<br>proyectos...</div>
+        <span class="visual-caption">Berazategui · Buenos Aires · 2026</span>
+      </div>
+      <a class="scroll-cue" href="#sobre-mi"><span></span> Deslizá para explorar</a>
+    </section>
+
+    <!-- 01 SOBRE MÍ -->
+    <section class="about section-shell section-space" id="sobre-mi" aria-labelledby="about-title">
+      <div class="section-label reveal"><span>01</span> / Sobre mí</div>
+      <h2 class="section-title reveal" id="about-title">Curiosidad por la tecnología.<br><span>Compromiso con cada detalle.</span></h2>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="about-lead">Soy estudiante de la Tecnicatura en Programación y disfruto construir proyectos web desde la idea hasta los últimos ajustes.</p>
+          <p>Me destaco por la autonomía, la responsabilidad y la capacidad de afrontar desafíos técnicos de forma eficiente. Soy proactivo para desarrollar proyectos y trabajo bien en equipo cuando hace falta, aportando soluciones prácticas y organizadas.</p>
+          <p>Me interesan el desarrollo web y la programación, el desarrollo básico de videojuegos, la ilustración y el dibujo, y la economía. Todo lo que aprendo lo pongo a prueba en proyectos propios.</p>
+          <a class="arrow-link" href="#contacto">¿Tenés una idea? Conversemos <span aria-hidden="true">→</span></a>
+        </div>
+        <aside class="quest px reveal" style="--d:120ms" aria-labelledby="quest-title">
+          <p class="card-label" style="color:var(--quiet);margin:0">Misión actual</p>
+          <h3 id="quest-title">Desarrollo de sitios web dinámicos</h3>
+          <ul>
+            <li>Diseño y desarrollo de varios sitios web funcionales y visualmente atractivos.</li>
+            <li>Interactividad con JavaScript.</li>
+            <li>Buenas prácticas de estructura y estilo en HTML y CSS.</li>
+            <li>Portafolio personal para demostrar mis habilidades técnicas.</li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="facts-row">
+        <div class="fact px reveal"><strong>2023 → 2027</strong><span>Formación técnica en programación</span></div>
+        <div class="fact px reveal" style="--d:80ms"><strong>08</strong><span>Proyectos en este portafolio</span></div>
+        <div class="fact px reveal" style="--d:160ms"><strong>ES / EN</strong><span>Español nativo · inglés avanzado oral y escrito</span></div>
+        <div class="fact px reveal" style="--d:240ms"><strong>+1</strong><span>Meta: seguir creciendo con cada proyecto</span></div>
+      </div>
+    </section>
+
+    <!-- 02 PROYECTOS -->
+    <section class="projects-section section-shell section-space" id="proyectos" aria-labelledby="projects-title">
+      <div class="section-label reveal"><span>02</span> / Trabajo seleccionado</div>
+      <div class="section-heading reveal">
+        <div>
+          <h2 class="section-title" id="projects-title">Proyectos con propósito<span class="accent">_</span></h2>
+          <p class="section-subtitle">Prácticas y proyectos personales donde cada desafío suma una herramienta nueva. Ordenados del más reciente al más antiguo.</p>
+        </div>
+        <span class="project-count">01 → 08</span>
+      </div>
+
+      <div class="project-filters reveal" role="group" aria-label="Filtrar proyectos">
+        <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">Todos <span>08</span></button>
+        <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web <span>03</span></button>
+        <button class="filter-button" type="button" data-filter="javascript" aria-pressed="false">JavaScript <span>04</span></button>
+        <button class="filter-button" type="button" data-filter="diseno" aria-pressed="false">Diseño <span>01</span></button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card project-card-featured px reveal" data-category="diseno">
+          <a class="project-image image-corvette" href="assets/corvette-concepto.png" target="_blank" rel="noreferrer" aria-label="Abrir diseño conceptual Corvette">
+            <img src="assets/corvette-concepto.png" alt="Diseño conceptual de página para el Corvette ZR1X" loading="lazy">
+            <span class="image-open" aria-hidden="true">→</span>
+            <span class="image-tag">UI / FIGMA</span>
+          </a>
+          <div class="project-info">
+            <div><p class="project-type">Nov 2026 · Diseño de interfaz</p><h3>Corvette ZR1X</h3></div>
+            <p class="project-description">Concepto visual de una página de producto: jerarquía, navegación y componentes para una experiencia automotriz, diseñado en Figma antes de maquetarlo.</p>
+            <div class="project-footer"><div class="tag-list"><span>Figma</span><span>UI</span><span>UX</span></div><a href="assets/corvette-concepto.png" target="_blank" rel="noreferrer" class="project-link">Ver diseño →</a></div>
+          </div>
+        </article>
+
+        <article class="project-card px reveal" data-category="javascript" style="--d:80ms">
+          <a class="project-image image-dynamic" href="proyectos/tienda-dinamica/dinamica.html" target="_blank" rel="noreferrer" aria-label="Abrir Tienda Dinámica">
+            <img src="assets/tienda-dinamica-banner.png" alt="Banner del proyecto Tienda Dinámica" loading="lazy">
+            <span class="image-open" aria-hidden="true">→</span>
+            <span class="image-tag">Interactivo</span>
+          </a>
+          <div class="project-info">
+            <div><p class="project-type">Oct 2026 · JavaScript</p><h3>Tienda Dinámica</h3></div>
+            <p class="project-description">Catálogo generado con JavaScript, carrusel de productos, carrito y cambio entre temas claro y oscuro.</p>
+            <div class="project-footer"><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a href="proyectos/tienda-dinamica/dinamica.html" target="_blank" rel="noreferrer" class="project-link">Ver proyecto →</a></div>
+          </div>
+        </article>
+
+        <article class="project-card px reveal" data-category="javascript" style="--d:160ms">
+          <a class="project-image image-calculator" href="proyectos/calculadora/calculadorabasica.html" target="_blank" rel="noreferrer" aria-label="Abrir calculadora">
+            <img src="assets/captura-calculadora.png" alt="Captura de la calculadora básica con pantalla y botones de operaciones" loading="lazy">
+            <span class="image-open" aria-hidden="true">→</span>
+            <span class="image-tag">Herramienta</span>
+          </a>
+          <div class="project-info">
+            <div><p class="project-type">Sep 2026 · Lógica y UI</p><h3>Calculadora básica</h3></div>
+            <p class="project-description">Interfaz para practicar operaciones aritméticas y la interacción entre HTML, CSS y JavaScript.</p>
+            <div class="project-footer"><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><a href="proyectos/calculadora/calculadorabasica.html" target="_blank" rel="noreferrer" class="project-link">Ver proyecto →</a></div>
+          </div>
+        </article>
+
+        <article class="project-card px reveal" data-category="javascript">
+          <a class="project-image image-practice" href="proyectos/practica-condicionales/index.html" target="_blank" rel="noreferrer" aria-label="Abrir práctica de condicionales">
+            <div class="code-art" aria-hidden="true"><div><span>let</span> precio = <b>4500</b>;<br><span>if</span> (precio &lt; 1000) {<br>&nbsp;&nbsp;console.log(<em>"económico"</em>);<br>}</div></div>
+            <span class="image-open" aria-hidden="true">→</span>
+            <span class="image-tag">Primeros pasos</span>
+          </a>
+          <div class="project-info">
+            <div><p class="project-type">Jun 2026 · Ejercicios</p><h3>Condicionales en JavaScript</h3></div>
+            <p class="project-description">Ejercicios iniciales de comparaciones y lógica condicional (if / else if / else), con salida en la consola del navegador.</p>
+            <div class="project-footer"><div class="tag-list"><span>JavaScript</span></div><a href="proyectos/practica-condicionales/index.html" target="_blank" rel="noreferrer" class="project-link">Ver proyecto →</a></div>
+          </div>
+        </article>
+
+        <article class="project-card px reveal" data-category="javascript" style="--d:80ms">
+          <a class="project-image image-practice" href="proyectos/practica-variables/index.html" target="_blank" rel="noreferrer" aria-label="Abrir práctica de variables y tipos">
+            <div class="code-art" aria-hidden="true"><div><span>let</span> nombre = <em>"Javier"</em>;<br><span>let</span> activo = <b>true</b>;<br><span>typeof</span>(nombre);</div></div>
+            <span class="image-open" aria-hidden="true">→</span>
+            <span class="image-tag">Fundamentos</span>
+          </a>
+          <div class="project-info">
+            <div><p class="project-type">Jun 2026 · Primeros pasos</p><h3>Variables y tipos</h3></div>
+            <p class="project-description">Práctica de variables, tipos de datos, alcance con var y condicionales, con salida en la consola del navegador.</p>
+            <div class="project-footer"><div class="tag-list"><span>JavaScript</span></div><a href="proyectos/practica-variables/index.html" target="_blank" rel="noreferrer" class="project-link">Ver proyecto →</a></div>
+          </div>
+        </article>
+
+        <article class="project-card px reveal" data-category="web" style="--d:160ms">
+          <a class="project-image image-shop" href="proyectos/michos-shop/index.html" target="_blank" rel="noreferrer" aria-label="Abrir Micho's Shop">
+            <img src="assets/michos-shop-banner.png" alt="Banner de la tienda Micho's Shop" loading="lazy">
+            <span class="image-open" aria-hidden="true">→</span>
+            <span class="image-tag">E-commerce</span>
+          </a>
+          <div class="project-info">
+            <div><p class="project-type">May 2026 · Sitio multipágina</p><h3>Micho's Shop</h3></div>
+            <p class="project-description">Tienda de tecnología con catálogo, fichas de productos y secciones de contacto, ayuda, ubicación y medios de pago.</p>
+            <div class="project-footer"><div class="tag-list"><span>HTML</span><span>CSS</span></div><a href="proyectos/michos-shop/index.html" target="_blank" rel="noreferrer" class="project-link">Ver proyecto →</a></div>
+          </div>
+        </article>
+
+        <article class="project-card px reveal" data-category="web">
+          <a class="project-image image-onepage" href="proyectos/one-page/index.html" target="_blank" rel="noreferrer" aria-label="Abrir landing page de servicios">
+            <img src="assets/one-page-hero.jpg" alt="Imagen de portada del proyecto One Page" loading="lazy">
+            <span class="image-open" aria-hidden="true">→</span>
+            <span class="image-tag">Landing page</span>
+          </a>
+          <div class="project-info">
+            <div><p class="project-type">Abr 2026 · Sitio de una página</p><h3>Web Dinámicas</h3></div>
+            <p class="project-description">Landing page de servicios digitales con portada, presentación, tarjetas de servicios y formulario de contacto.</p>
+            <div class="project-footer"><div class="tag-list"><span>HTML</span><span>CSS</span></div><a href="proyectos/one-page/index.html" target="_blank" rel="noreferrer" class="project-link">Ver proyecto →</a></div>
+          </div>
+        </article>
+
+        <article class="project-card px reveal" data-category="web" style="--d:80ms">
+          <a class="project-image image-form" href="proyectos/formulario/index.html" target="_blank" rel="noreferrer" aria-label="Abrir formulario de usuario">
+            <img src="assets/captura-formulario.png" alt="Captura del formulario de contacto con campos de nombre, apellido, teléfono y email" loading="lazy">
+            <span class="image-open" aria-hidden="true">→</span>
+            <span class="image-tag">Formulario</span>
+          </a>
+          <div class="project-info">
+            <div><p class="project-type">Mar 2026 · Componente web</p><h3>Formulario de usuario</h3></div>
+            <p class="project-description">Formulario adaptable con campos identificados, validación nativa del navegador y estilos propios.</p>
+            <div class="project-footer"><div class="tag-list"><span>HTML</span><span>CSS</span></div><a href="proyectos/formulario/index.html" target="_blank" rel="noreferrer" class="project-link">Ver proyecto →</a></div>
+          </div>
+        </article>
+      </div>
+      <p class="projects-note"><span aria-hidden="true">&gt;</span> Las demos y capturas están incluidas en esta carpeta; cada tarjeta abre el proyecto real.</p>
+    </section>
+
+    <!-- 03 HABILIDADES -->
+    <section class="skills-section section-shell section-space" id="habilidades" aria-labelledby="skills-title">
+      <div class="section-label reveal"><span>03</span> / Habilidades y tecnologías</div>
+      <div class="skills-layout">
+        <div class="reveal">
+          <h2 class="section-title" id="skills-title">Herramientas para<br><span>hacer que pase.</span></h2>
+          <p class="section-subtitle">Una base que sigo ampliando con cada proyecto, más las habilidades personales que me ayudan a llevarlos a buen puerto.</p>
+        </div>
+        <div class="skill-groups">
+          <div class="skill-group px reveal">
+            <h3><i></i>Desarrollo web</h3>
+            <div class="slots"><span class="slot" style="--c:#ff9ecb">HTML</span><span class="slot" style="--c:#7fe3ff">CSS</span><span class="slot" style="--c:#ffd166">JavaScript</span><span class="slot" style="--c:#b79cff">PHP</span></div>
+          </div>
+          <div class="skill-group px reveal" style="--d:60ms">
+            <h3><i></i>Programación y bases de datos</h3>
+            <div class="slots"><span class="slot" style="--c:#7fe3ff">Python</span><span class="slot" style="--c:#ffd166">MySQL</span></div>
+          </div>
+          <div class="skill-group px reveal" style="--d:120ms">
+            <h3><i></i>Herramientas</h3>
+            <div class="slots"><span class="slot" style="--c:#7fe3ff">Visual Studio Code</span><span class="slot" style="--c:#ff9ecb">Figma</span></div>
+          </div>
+          <div class="skill-group px reveal" style="--d:180ms">
+            <h3><i></i>Habilidades personales</h3>
+            <ul class="soft-list"><li>Resolución de problemas</li><li>Pensamiento estratégico</li><li>Autonomía y organización</li><li>Liderazgo</li><li>Responsabilidad y confidencialidad</li><li>Trabajo en equipo</li></ul>
+          </div>
+          <div class="skill-group px reveal" style="--d:240ms">
+            <h3><i></i>Idiomas</h3>
+            <div class="lang-row">
+              <div class="lang"><strong>Español</strong><span>Nativo</span><div class="pips" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div>
+              <div class="lang"><strong>Inglés</strong><span>Avanzado oral y escrito</span><div class="pips" aria-hidden="true"><i></i><i></i><i></i><i></i><i class="off"></i></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="interests" aria-label="Intereses">
+        <div class="interest px reveal">
+          <svg class="glyph" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 1h6v1H1zM1 2h1v5H1zM6 2h1v5H6zM1 6h6v1H1zM3 3h2v1H3zM3 4h2v1H3z"/></svg>
+          <h3>Desarrollo web y programación</h3><p>Sitios dinámicos y lógica</p>
+        </div>
+        <div class="interest px reveal" style="--d:60ms">
+          <svg class="glyph" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 2h6v4H1zM2 3v2h1V3zM5 3v2h1V3z" fill-rule="evenodd"/><rect x="0" y="3" width="1" height="2"/><rect x="7" y="3" width="1" height="2"/></svg>
+          <h3>Videojuegos</h3><p>Desarrollo básico</p>
+        </div>
+        <div class="interest px reveal" style="--d:120ms">
+          <svg class="glyph" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><path d="M6 0h1v1h1v1H7v1H6V2H5V1h1zM5 3h1v1H5zM4 4h1v1H4zM3 5h1v1H3zM2 6h1v1H2zM1 7h1v1H0V7z"/></svg>
+          <h3>Ilustración y dibujo</h3><p>Creatividad visual</p>
+        </div>
+        <div class="interest px reveal" style="--d:180ms">
+          <svg class="glyph" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 6h2v1H1zM3 4h2v3H3zM5 2h2v5H5zM0 7h8v1H0z"/></svg>
+          <h3>Economía</h3><p>Entender cómo se mueve el valor</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 FORMACIÓN -->
+    <section class="education-section section-shell section-space" id="formacion" aria-labelledby="edu-title">
+      <div class="section-label reveal"><span>04</span> / Formación</div>
+      <h2 class="section-title reveal" id="edu-title">Técnico en Programación<span class="accent">_</span></h2>
+      <div class="edu-card px reveal">
+        <img class="edu-logo" src="assets/logo-eest5.png" alt="Logo de la EEST N.º 5, con las orientaciones Informática, Programación y Construcciones" width="104" height="104">
+        <div>
+          <p class="project-type">Formación actual · cursando</p>
+          <h3>Programación Técnica</h3>
+          <p>Escuela de Educación Secundaria Técnica N.º 5 (EEST N.º 5)</p>
+          <p class="edu-meta">Materia actual: Desarrollo de Aplicaciones Web Dinámicas, 6.º 2.ª</p>
+        </div>
+        <div class="edu-date"><small>PERÍODO</small>2023 → 2027</div>
+      </div>
+    </section>
+
+    <!-- 05 CONTACTO -->
+    <section class="contact-section section-shell section-space" id="contacto" aria-labelledby="contact-title">
+      <div class="contact-inner">
+        <div class="section-label reveal"><span>05</span> / Contacto</div>
+        <div class="contact-content reveal">
+          <p class="eyebrow">¿Tenés un proyecto en mente?</p>
+          <h2 id="contact-title">Hagamos algo<br><span>que valga la pena.</span></h2>
+          <a class="contact-email" href="mailto:dulcedebatata09@gmail.com">dulcedebatata09@gmail.com</a>
+          <div class="contact-links">
+            <a href="tel:+5491166621468">+54 9 11 6662-1468</a>
+            <span>Berazategui, Buenos Aires, Argentina</span>
+          </div>
+        </div>
+        <form class="contact-form px reveal" style="--d:120ms" id="contact-form" action="https://formspree.io/f/REEMPLAZAR_CON_TU_ID" method="POST" novalidate>
+          <label for="contact-name">Nombre</label>
+          <input id="contact-name" name="name" type="text" autocomplete="name" required>
+
+          <label for="contact-email-input">Email</label>
+          <input id="contact-email-input" name="email" type="email" autocomplete="email" required>
+
+          <label for="contact-message">Mensaje</label>
+          <textarea id="contact-message" name="message" rows="4" minlength="10" required></textarea>
+
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="_subject" value="Mensaje desde el portafolio de Javier Aguirre">
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <button class="contact-cta" type="submit"><span>Enviar mensaje</span><span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/logo-eest5.png" alt="Logo de la EEST N.º 5" width="40" height="40">
+        <p>Javier Aguirre · Programación<br>© <span id="current-year">2026</span> Todos los derechos reservados</p>
+      </div>
+      <a class="footer-inspiration" href="inspiracion.html">Referencias e inspiración</a>
+      <a class="back-top" href="#inicio">Volver arriba ↑</a>
+      <p class="footer-credits">Fuente: Monocraft de IdreesInc (licencia OFL). El video de fondo y la música de fondo son material decorativo inspirado en Saint Seiya; sus derechos pertenecen a sus respectivos titulares y se usan solo con fines educativos en este trabajo escolar.</p>
+    </div>
+  </footer>
+
+  <!-- Controles de música y fondo -->
+  <div class="dock">
+    <button class="dock-btn video-btn" id="video-toggle" type="button" aria-pressed="true" aria-label="Pausar fondo animado">
+      <svg viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><path class="ico-on" d="M1 1h2v6H1zM5 1h2v6H5z"/><path class="ico-off" d="M1 1h2v1h1v1h1v2H4v1H3v1H1z"/></svg>
+      <span>Fondo</span>
+    </button>
+    <button class="dock-btn music-btn" id="music-toggle" type="button" aria-pressed="true" aria-label="Silenciar música">
+      <svg viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 3h2l2-2v6L3 5H1z"/><path class="ico-on" d="M6 2h1v4H6z"/><path class="ico-off" d="M6 3h1v1H6zM7 4h1v1H7z"/></svg>
+      <span id="music-label">Música</span>
+    </button>
+  </div>
+  <div class="music-hint" id="music-hint" role="status" aria-live="polite">Tocá la pantalla o presioná una tecla para activar la música</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05051a">
+  <meta name="description" content="Ficha del proyecto MICHOWARE, un simulador offline para Windows desarrollado con Python y Pygame.">
+  <title>MICHOWARE | Javier Aguirre</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicon-192.png">
+  <link rel="shortcut icon" href="../../favicon.ico">
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+  <link rel="preload" href="../../Monocraft.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="../../styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="../../script.js" defer></script>
+</head>
+<body>
+  <!-- Fondo animado decorativo: sin audio, silenciado y en bucle -->
+  <div class="bg-video" id="bg-video" style="background-image:url('../../assets/fondo-poster.jpg')" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="auto" poster="../../assets/fondo-poster.jpg" tabindex="-1">
+      <source src="../../assets/fondo-saintseiya.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="bg-veil" aria-hidden="true"></div>
+  <audio id="bg-music" src="../../pegasusfantasyslow.mp3" loop preload="auto"></audio>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="../../index.html#inicio" aria-label="Javier Aguirre, volver al portafolio">
+        <svg class="wordmark-star" viewBox="0 0 7 7" shape-rendering="crispEdges" aria-hidden="true"><path d="M3 0h1v2h1v1h2v1h-2v1h-1v2h-1v-2h-1v-1h-2v-1h2v-1h1z"/></svg>
+        <span>Javier Aguirre<span class="wordmark-dot">_</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú"><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegación">
+        <a href="../../index.html#proyectos">Proyectos</a>
+        <a href="../../index.html#habilidades">Habilidades</a>
+        <a href="../../index.html#formacion">Formación</a>
+        <a href="../../index.html#contacto" class="nav-contact">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="inspiration-hero section-shell" id="inicio" aria-labelledby="project-title">
+      <p class="section-label reveal"><span>Proyecto personal</span> / Noviembre 2026</p>
+      <h1 class="section-title reveal" id="project-title">MICHOWARE<span class="accent">_</span><br><span>De una PC a una empresa.</span></h1>
+      <p class="section-subtitle reveal">Un simulador offline para Windows sobre Papatolio, un desarrollador que convierte una computadora rescatada en una empresa tecnológica. La experiencia combina una campaña narrativa con sistemas de desarrollo, gestión y crecimiento.</p>
+      <div class="project-profile-tags reveal"><span>Python 3.11+</span><span>Pygame</span><span>SQLite</span><span>Windows</span></div>
+    </section>
+
+    <section class="inspiration-content section-shell" aria-labelledby="systems-title">
+      <div class="section-label reveal"><span>01</span> / Sistemas del juego</div>
+      <h2 class="section-title reveal" id="systems-title">Una simulación que<br><span>crece con cada decisión.</span></h2>
+      <div class="project-profile-grid">
+        <article class="inspiration-card px reveal"><p class="project-type">Campaña</p><h3>Siete capítulos</h3><p>Una historia de progreso con objetivos y continuidad en modo infinito después del final.</p></article>
+        <article class="inspiration-card px reveal" style="--d:60ms"><p class="project-type">Desarrollo</p><h3>Crear y publicar</h3><p>Investigación, componentes, desarrollo, pruebas y publicación de software con distintas formas de generar ingresos.</p></article>
+        <article class="inspiration-card px reveal" style="--d:120ms"><p class="project-type">Gestión</p><h3>Un negocio en marcha</h3><p>Usuarios, reputación, gastos, campañas, contratación y mejoras conectan las decisiones técnicas con el crecimiento de la empresa.</p></article>
+        <article class="inspiration-card px reveal" style="--d:180ms"><p class="project-type">Guardado local</p><h3>Partidas privadas</h3><p>Las partidas se guardan en SQLite en el propio dispositivo. El juego no requiere Internet ni recopila información personal.</p></article>
+      </div>
+    </section>
+
+    <section class="design-decisions section-shell" aria-labelledby="technical-title">
+      <div class="reveal">
+        <p class="section-label"><span>02</span> / Tecnología y enfoque</p>
+        <h2 class="section-title" id="technical-title">Una experiencia<br><span>local y accesible.</span></h2>
+      </div>
+      <div class="learning-note px reveal">
+        <p class="project-type">Hecho para Windows · interfaz y arte generados localmente</p>
+        <p>El proyecto está escrito en Python y usa Pygame para la interfaz y la simulación, y SQLite para los guardados. La música chiptune y el arte de estilo pixel se generan dentro del juego. Los incidentes y amenazas son ficticios y educativos: el programa no descarga ni ejecuta malware, no abre enlaces y no realiza conexiones de red.</p>
+      </div>
+    </section>
+
+    <section class="inspiration-content section-shell">
+      <p class="projects-note"><a class="arrow-link" href="../../index.html#proyectos">← Volver a todos los proyectos</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="../../assets/logo-eest5.png" alt="Logo de la EEST N.º 5" width="40" height="40">
+        <p>Javier Aguirre · Programación<br>© <span id="current-year">2026</span> Todos los derechos reservados</p>
+      </div>
+      <a href="../../index.html">← Volver al portafolio</a>
+      <a class="back-top" href="#contenido">Volver arriba ↑</a>
+      <p class="footer-credits">Fuente: Monocraft de IdreesInc (licencia OFL). El video de fondo y la música de fondo son material decorativo inspirado en Saint Seiya; sus derechos pertenecen a sus respectivos titulares y se usan solo con fines educativos en este trabajo escolar.</p>
+    </div>
+  </footer>
+
+  <div class="dock">
+    <button class="dock-btn video-btn" id="video-toggle" type="button" aria-pressed="true" aria-label="Pausar fondo animado">
+      <svg viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><path class="ico-on" d="M1 1h2v6H1zM5 1h2v6H5z"/><path class="ico-off" d="M1 1h2v1h1v1h1v2H4v1H3v1H1z"/></svg>
+      <span>Fondo</span>
+    </button>
+    <button class="dock-btn music-btn" id="music-toggle" type="button" aria-pressed="true" aria-label="Silenciar música">
+      <svg viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><path d="M1 3h2l2-2v6L3 5H1z"/><path class="ico-on" d="M6 2h1v4H6z"/><path class="ico-off" d="M6 3h1v1H6zM7 4h1v1H7z"/></svg>
+      <span id="music-label">Música</span>
+    </button>
+  </div>
+  <div class="music-hint" id="music-hint" role="status" aria-live="polite">Tocá la pantalla o presioná una tecla para activar la música</div>
+</body>
+</html>

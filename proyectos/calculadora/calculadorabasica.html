@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="calculadora">
+    <section class="encabezado">
+        <span class="etiqueta">CALCULADORA</span>
+        <h1>Calculadora xdd</h1>
+    </section>
+
+    <section class="panel-calculadora">
+        <div class="pantalla">
+            <div id="operacion"></div>
+            <input type="number" id="resultado" placeholder="0">
+        </div>
+
+        <div class="botones">
+            <button class="operador" onclick="seleccionarOperacion('+')">+</button>
+            <button class="operador" onclick="seleccionarOperacion('-')">−</button>
+            <button class="operador" onclick="seleccionarOperacion('*')">×</button>
+            <button class="operador" onclick="seleccionarOperacion('/')">÷</button>
+            <button class="igual" onclick="calcular()">=</button>
+        </div>
+    </section>
+</main>
+
+<script src="calculadora-s-m.js"></script>
+
+</body>
+</html>

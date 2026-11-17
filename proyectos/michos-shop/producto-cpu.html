@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMD Ryzen 7 - Micho's Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="logo">Micho's Shop</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="cuenta.html">Mi cuenta</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="ubicacion.html">Ubicación</a>
+        <a href="pagos.html">Pagos</a>
+        <a href="ayuda.html">Ayuda</a>
+    </nav>
+    <input type="text" placeholder="Buscar...">
+</header>
+
+<section class="producto-container">
+    <div class="galeria">
+        <img src="Imágenes/ryzen7.jpg" class="imagen-principal" alt="AMD Ryzen 7">
+        <div class="miniaturas">
+            <img src="Imágenes/ryzen7.jpg" alt="Ryzen vista 1">
+            <img src="Imágenes/ryzen7.jpg" alt="Ryzen vista 2">
+            <img src="Imágenes/ryzen7.jpg" alt="Ryzen vista 3">
+        </div>
+    </div>
+    <div class="info-producto">
+        <h1>AMD Ryzen 7 7800X3D</h1>
+        <p class="precio">$220.000</p>
+        <p class="envio">Envío gratis a todo el país</p>
+        <p class="descripcion">
+            Procesador de 8 núcleos y 16 hilos, arquitectura Zen 4, caché 3D V-Cache
+            de 96MB. Frecuencia base 4.2GHz y boost 5.0GHz, ideal para gaming de alto
+            rendimiento y aplicaciones profesionales.
+        </p>
+        <div class="opciones">
+            <label>Cantidad:</label>
+            <select>
+                <option>1</option>
+                <option>2</option>
+            </select>
+        </div>
+        <button class="btn-comprar">Comprar ahora</button>
+        <button class="btn-carrito">Agregar al carrito</button>
+    </div>
+</section>
+
+<section class="relacionados">
+    <h2>Productos relacionados</h2>
+    <div class="grid-relacionados">
+
+        <a href="producto-rtx.html" class="card">
+        <div class="img-container">
+            <img src="Imágenes/rtx.webp" height="200" width="200">
+        </div>
+        <div class="card-info">
+            <h3 class="titulo">GeForce RTX 4070</h3>
+            <p class="precio-anterior">$550.000</p>
+            <div class="precio-row">
+            <span class="precio">$500.000</span>
+            <span class="descuento">-9%</span>
+            </div>
+            <p class="envio">Envío gratis</p>
+        </div>
+        </a>
+
+        <a href="producto-ssd.html" class="card">
+        <div class="img-container">
+            <img src="Imágenes/ssd.jpg" height="200" width="200">
+        </div>
+        <div class="card-info">
+            <h3 class="titulo">SSD 1TB</h3>
+            <p class="precio-anterior">$95.000</p>
+            <div class="precio-row">
+            <span class="precio">$80.000</span>
+            <span class="descuento">-15%</span>
+            </div>
+            <p class="envio">Envío gratis</p>
+        </div>
+        </a>
+
+        <a href="producto-gabinete.html" class="card">
+        <div class="img-container">
+            <img src="Imágenes/gabinete.jpg" height="200" width="200">
+        </div>
+        <div class="card-info">
+            <h3 class="titulo">Gabinete</h3>
+            <p class="precio-anterior">$110.000</p>
+            <div class="precio-row">
+            <span class="precio">$90.000</span>
+            <span class="descuento">-18%</span>
+            </div>
+            <p class="envio">Envío gratis</p>
+        </div>
+        </a>
+    </div>
+</section>
+<footer>
+    <p>© 2026 Micho's Shop - Todos los derechos reservados</p>
+</footer>
+</body>
+</html>
