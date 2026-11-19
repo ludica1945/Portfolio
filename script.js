@@ -31,7 +31,7 @@
     gate.setAttribute("aria-labelledby", "gate-title");
     gate.innerHTML =
       '<div class="gate-card px">' +
-        '<p class="card-label" style="color:var(--quiet);margin:0">Jugador: Ludica45</p>' +
+        '<p class="card-label" style="color:var(--quiet);margin:0">Ludica45</p>' +
         '<h2 id="gate-title">Bienvenido al portafolio de Javier</h2>' +
         '<p>Para la mejor experiencia te recomiendo activar la música y el fondo animado. Podés cambiarlo cuando quieras con los botones de abajo a la derecha.</p>' +
         '<div class="gate-options">' +
