@@ -1,55 +1,186 @@
-let numero1 = "";
-let operador = "";
+let numero1 = null;
+let operador = null;
+let esperandoNumero = false;
+let reiniciarAlDigitar = false;
+
+const resultado = () => document.getElementById("resultado");
+const operacion = () => document.getElementById("operacion");
+
+function mostrarResultado(valor) {
+    resultado().value = valor;
+}
+
+function limpiar() {
+    numero1 = null;
+    operador = null;
+    esperandoNumero = false;
+    reiniciarAlDigitar = false;
+    operacion().textContent = "";
+    resultado().value = "";
+    resultado().placeholder = "0";
+}
+
+function borrarUltimo() {
+    if (reiniciarAlDigitar) return;
+
+    resultado().value = resultado().value.slice(0, -1);
+
+    if (resultado().value === "") {
+        resultado().placeholder = "0";
+    }
+}
+
+function agregarNumero(digito) {
+    let pantalla = resultado();
+
+    if (reiniciarAlDigitar) {
+        pantalla.value = "";
+        pantalla.placeholder = "0";
+        reiniciarAlDigitar = false;
+    }
+
+    if (esperandoNumero) {
+        pantalla.value = "";
+        esperandoNumero = false;
+    }
+
+    if (pantalla.value.length >= 15) return;
+
+    if (digito === "." && pantalla.value.includes(".")) return;
+
+    if (pantalla.value === "0" && digito !== ".") {
+        pantalla.value = digito;
+    } else {
+        pantalla.value += digito;
+    }
+}
+
+function cambiarSigno() {
+    let pantalla = resultado();
+
+    if (!pantalla.value) return;
+
+    if (pantalla.value.startsWith("-")) {
+        pantalla.value = pantalla.value.slice(1);
+    } else {
+        pantalla.value = "-" + pantalla.value;
+    }
+}
+
+function porcentaje() {
+    let valor = Number(resultado().value);
+
+    if (!Number.isFinite(valor) || valor === 0) return;
+
+    resultado().value = String(valor / 100);
+}
 
 function seleccionarOperacion(op) {
-    let valorInput = document.getElementById("resultado").value;
-    
-    if (valorInput !== "") {
-        numero1 = valorInput;
+    let valorActual = resultado().value;
+
+    if (valorActual === "" && numero1 === null) return;
+
+    if (numero1 !== null && operador && !esperandoNumero) {
+        calcular();
+    } else if (valorActual !== "") {
+        numero1 = Number(valorActual);
     }
-    
-    if (numero1 === "") return;
-    
+
     operador = op;
-    document.getElementById("operacion").textContent = numero1 + " " + operador;
-    document.getElementById("resultado").value = "";
-    document.getElementById("resultado").placeholder = "0";
+    esperandoNumero = true;
+    reiniciarAlDigitar = false;
+
+    operacion().textContent = formatearNumero(numero1) + " " + simboloOperacion(op);
 }
 
 function calcular() {
-    let numero2 = document.getElementById("resultado").value;
+    if (numero1 === null || operador === null) return;
 
-    document.getElementById("operacion").textContent = numero1 + " " + operador + " " + numero2 + " =";
+    let valorActual = resultado().value;
 
-    let toggle = document.getElementById("toggle-suscripcion");
-    if (toggle && toggle.checked) {
-        document.getElementById("overlay-suscripcion").style.display = "flex";
+    if (valorActual === "") valorActual = String(numero1);
+
+    let numero2 = Number(valorActual);
+
+    if (!Number.isFinite(numero2)) {
+        mostrarError("Error");
         return;
     }
 
-    let n1 = Number(numero1);
-    let n2 = Number(numero2);
-    let res = 0;
-
-    if (operador === "+") res = n1 + n2;
-    else if (operador === "-") res = n1 - n2;
-    else if (operador === "*") res = n1 * n2;
-    else if (operador === "/") {
-        if (n2 === 0) {
-            res = "No se puede dividir por 0";
-        } else {
-            res = n1 / n2;
-        }
+    if (operador === "/" && numero2 === 0) {
+        operacion().textContent = formatearNumero(numero1) + " ÷ 0 =";
+        mostrarError("No se puede dividir por 0");
+        return;
     }
 
-    if (res === "Error") {
-        document.getElementById("resultado").value = "";
-        document.getElementById("resultado").placeholder = "Error";
-        numero1 = "";
-    } else {
-        document.getElementById("resultado").value = Number(res.toFixed(10));
-        numero1 = document.getElementById("resultado").value;
+    let resultadoOperacion;
+
+    if (operador === "+") resultadoOperacion = numero1 + numero2;
+    else if (operador === "-") resultadoOperacion = numero1 - numero2;
+    else if (operador === "*") resultadoOperacion = numero1 * numero2;
+    else if (operador === "/") resultadoOperacion = numero1 / numero2;
+
+    if (!Number.isFinite(resultadoOperacion)) {
+        mostrarError("Error");
+        return;
     }
-    
-    operador = "";
+
+    operacion().textContent = formatearNumero(numero1) + " " + simboloOperacion(operador) + " " + formatearNumero(numero2) + " =";
+
+    let valorFinal = Number(resultadoOperacion.toPrecision(12));
+    mostrarResultado(formatearNumero(valorFinal));
+
+    numero1 = valorFinal;
+    operador = null;
+    esperandoNumero = false;
+    reiniciarAlDigitar = true;
 }
+
+function mostrarError(mensaje) {
+    resultado().value = "";
+    resultado().placeholder = mensaje;
+    numero1 = null;
+    operador = null;
+    esperandoNumero = false;
+    reiniciarAlDigitar = true;
+}
+
+function simboloOperacion(op) {
+    if (op === "*") return "×";
+    if (op === "/") return "÷";
+    if (op === "-") return "−";
+    return op;
+}
+
+function formatearNumero(valor) {
+    if (!Number.isFinite(valor)) return "Error";
+
+    return String(Number(Number(valor).toPrecision(12)));
+}
+
+document.addEventListener("keydown", function(evento) {
+    if (/^[0-9]$/.test(evento.key)) {
+        agregarNumero(evento.key);
+    } else if (evento.key === "." || evento.key === ",") {
+        agregarNumero(".");
+    } else if (["+", "-", "*", "/"].includes(evento.key)) {
+        seleccionarOperacion(evento.key);
+    } else if (evento.key === "Enter" || evento.key === "=") {
+        evento.preventDefault();
+        calcular();
+    } else if (evento.key === "Backspace") {
+        borrarUltimo();
+    } else if (evento.key === "Escape" || evento.key === "Delete") {
+        limpiar();
+    } else if (evento.key === "%") {
+        porcentaje();
+    }
+});
+
+window.calcular = calcular;
+window.seleccionarOperacion = seleccionarOperacion;
+window.agregarNumero = agregarNumero;
+window.limpiar = limpiar;
+window.borrarUltimo = borrarUltimo;
+window.cambiarSigno = cambiarSigno;
+window.porcentaje = porcentaje;
